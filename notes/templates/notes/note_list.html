@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            {% block title %}{% endblock %}
+        </title>
+        <link href="{% static "css/notes.css" %}" rel="stylesheet">
+    </head>
+    <body>
+<header>
+    <div class="logo">
+      <img src="logo.png" alt="Notatki">
+    </div>
+    <nav>
+      <ul>
+        <div class="theme-toggle">
+            <input type="checkbox" id="theme-checkbox">
+            <label for="theme-checkbox"></label>
+          </div>
+
+        <li><a href="#">Strona główna</a></li>
+        <li><a href="#">Edytuj</a></li>
+        <li><a href="{% url 'note_create' %}" class="btn">Dodaj</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="brick">
+        {% for note in notes %}
+      <h2><a href="{% url 'note_detail' pk=note.pk %}">{{ note.title }}</a></h2>
+      <p>{{ note.content }}</p>
+      <a href="{% url 'note_edit' pk=note.pk %}" class="button">Edytuj</a>
+          {% empty %}
+        <li>Brak notatek</li>
+            {% endfor %}
+    </div>
+  </div>
+
+
+
+  <footer>
+    <a href="https://github.com/example"><img src="github-icon.png" alt="GitHub"></a>
+  </footer>
+<a href="{% url 'note_create' %}" class="btn">Dodaj nową notatkę</a>
+<ul>
+
+
+
+</ul>
+</body>
+</html>
