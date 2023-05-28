@@ -1,0 +1,91 @@
+body {
+    background-color: #E0E0E0;
+    font-family: sans-serif;
+    margin: 0;
+    transition: background-color 0.3s ease;
+    color: black;
+  }
+  a{
+    color: black;
+    text-decoration: none;
+  }
+
+  header {
+    margin-bottom: 5vh;
+    background-color: #433F61;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    height: 50px;
+  }
+
+  header nav ul {
+    list-style: none;
+    display: flex;
+  }
+
+  header nav ul li {
+    margin-left: 10px;
+  }
+
+  header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  footer {
+    background-color: #433F61;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .container {
+    margin: 0 10vh;
+    display: flex;
+    flex-wrap: wrap; /* Доданий flex-wrap */
+  }
+
+  .brick {
+    width: 200px;
+    background-color: #F2F2F2;
+    padding: 10px;
+    margin-left: 30px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+  }
+
+  .brick h2 {
+    margin-top: 0;
+    background-color: #555;
+    color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+  }
+
+  .button {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+
+  .button:hover {
+    background-color: #555;
+  }
+
+  .dark-text {
+    color: #fff;
+    background-color: #333;
+  }
+
+  .dark-text .brick {
+    background-color: #555;
+  }
